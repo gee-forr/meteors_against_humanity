@@ -3,11 +3,27 @@
 </head>
 
 <body>
-  {{> hello}}
+  {{> initial_screen}}
+  {{> black_card_listing}}
+  {{> white_card_listing}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="black_card_listing">
+  <ul>
+    {{#each list_all_cards "black"}}
+    <li>{{text}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="white_card_listing">
+  <ul>
+    {{#each list_all_cards "white"}}
+    <li>{{text}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="initial_screen">
+  <button class="btn btn-primary btn-large" id="game_start">Start a new game</button>
 </template>
