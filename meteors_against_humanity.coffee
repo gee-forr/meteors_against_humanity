@@ -1,3 +1,6 @@
+BlackCards = new Meteor.Collection("black_cards")
+WhiteCards = new Meteor.Collection("white_cards")
+
 if Meteor.isClient
   Template.hello.greeting = ->
     "Welcome to meteors_against_humanity."
